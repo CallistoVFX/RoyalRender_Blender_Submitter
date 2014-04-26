@@ -1,0 +1,208 @@
+Issue 1 :
+Only working with Blender 2.64
+all other Versions of Blender crash directly after Render start with following log:
+
+
+Aktive Codepage: 1252.
+E  0|  ++++++++++++++++++++++++ Log Start +++++++++++++++++++++++++
+E  1|  GOLIATH-01  rrClient console L     6.02.31    rrVer7.0.b8q+6.2
+E  2|  04.25 20:38.15
+E  3|  Client is running on Win7_sp1 x64 16x2.0 Intel 32.0Ghz
+E  4|  Environment user is     Rufin
+E  5|  Windows is using registry:  HKEY_USERS/S-1-5-21-2341192651-3826740998-3148351776-1118/
+E  6|  Environment AppData path:    USER_FOLDER\AppData\Roaming
+E  7|  WinApi Folder LocalAppData:  USER_FOLDER\AppData\Local
+E  8|  USERPROFILE: USER_FOLDER
+E  9|  . 
+E 10|  Job: {UWJ}  Sequence: 1-39, 19
+E 11|  Scene: ...\    test_scene\    test_scene_A 613.82Kb 04.25 20:41.54
+E 12|  Render config used: Blender blender   3D19__Blender.cfg
+E 13|  Executable used: C:\Program Files\Blender Foundation\Blender 2.70\blender.exe   
+E 14| >set "rrExeBit=x64"  
+E 15| >set "rrExeVersion=2.7"  
+E 16| >set "rrExeVersionMinReq=2.7"  
+E 17| >set "rrExeVersionMajor=2"  
+E 18| >set "rrExeVersionMinor=7"  
+E 19| >set "rrExeOS=win"  
+E 20|  ++++++++++++ Environment Variables Job: ++++++++++++++++++++
+E 21| >set "rrJobRenderapp=Blender"  
+E 22| >set "rrJobRenderer=blender"  
+E 23| >set "rrJobProject=stemmann_hafen_2014"  
+E 24| >set "rrJobType=3D"  
+E 25| >set "rrJobRenderType="  
+E 26| >set "rrJobBit=x64"  
+E 27| >set "rrJobVersion=2.7"  
+E 28| >set "rrJobVersionMajor=2"  
+E 29| >set "rrJobVersionMinor=7"  
+E 30| >set "rrJobTiled=false"  
+E 31| >set "rrJobCustomScene=<auto>"  
+E 32| >set "rrJobCustomShot=<auto>"  
+E 33| 
+E 34| >set "rrJobCustomVersion=<auto>"  
+E 35| >set "rrJobSceneOS=win"  
+E 36|  ++++++++++++ Environment Variables Client: +++++++++++++++++
+E 37| >set "rrClientName=GOLIATH-01"  
+E 38| >set "rrClientCPUs=16"  
+E 39| >set "rrClientCPUsUsed=16"  
+E 40| >set "rrClientBit=x64"  
+E 41| >set "rrClientRenderInstance=0"  
+E 42| >set "RR_ROOT=REPLACED_RR_ROOT"  
+E 43| >set "rrBin=REPLACED_RR_ROOT\bin\win\"  
+E 44| >set "rrPlugins=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\win_x64\"  
+E 45| >set "rrPluginsNoOS=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\"  
+E 46| >set "rrPrefs=REPLACED_RR_ROOT\render_apps\renderer_prefs\blender\win_x64\"  
+E 47| >set "rrSharedExeDir=REPLACED_RR_ROOT\render_apps\renderer_exe\blender\win_x64\"  
+E 48| >set "rrLocalTemp=C:\RR_localdata\temp\A\"  
+E 49| >set "TEMP=C:\RR_localdata\temp\A"  
+E 50| >set "TMP=C:\RR_localdata\temp\A"  
+E 51| >set "rrLocalRoot=C:\RR_localdata\"  
+E 52| >set "rrLocalExeDir=C:\RR_localdata\renderer_exe\blender\win_x64\"  
+E 53| >set "rrLocalPrefs=C:\RR_localdata\renderer_prefs\blender\win_x64\"  
+E 54| >set "rrLocalPlugins=C:\RR_localdata\renderer_plugins\blender\win_x64\"  
+E 55| >set "rrBaseAppPath=C:\Program Files\Blender Foundation\Blender 2.70"  
+S  0|  ++++++++++++ Environment Variables Done  +++++++++++++++++++
+S  1| 
+S  2| >call "C:\RR_localdata\_global.bat" 
+S  3| >rem ################ global environment for all render applications ################### 
+S  4| 
+S  5| >call "C:\RR_localdata\blender.bat" 
+S  6| >set "BLENDER_APP_DIR=C:\RR_localdata\renderer_prefs\blender\win_x64\" 
+S  7| 
+R  0| >"REPLACED_RR_ROOT\bin\win\rrResetexitcode.exe"
+R  1| 
+R  2| +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+R  3| ++++++++++++++++++++++++++++++++++++++++++ START ++++++++++++++++++++++++++++++++++++++++++++++
+R  4| ++++++++++++++++++++++++++++++++++++++++ 7.0.b4+6.2 ++++++++++++++++++++++++++++++++++++++++++
+R  5| +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+R  6| 
+R  7| >"C:\Program Files\Blender Foundation\Blender 2.70\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\test_Blend270_" -F JPEG -x 1 -t 0 -s 1 -e 39  -a 
+R  8| Writing: /tmp/\blender.crash.txt
+R  9| 
+R 10| >"REPLACED_RR_ROOT\bin\win\rrCheckexitcode.exe" 11 0 0 1 
+R 11| 
+R 12| 
+
+
+If you start the Command:
+C:\Program Files\Blender Foundation\Blender 2.70\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\test_Blend270_" -F JPEG -x 1 -t 0 -s 1 -e 39  -a
+directly in the Commandline Blender renders without any Problems.
+
+Content of the blender.crash.txt
+# Blender 2.70 (sub 0), Commit date: 2014-04-10 11:49, Hash f93bc76
+
+Used cfg Files look like this :
+ LINK TO FILES HERE
+
+
+
+
+
+Issue 2 
+
+Blender is rendering wih 2.64. All Frames get renderd, but Royal Render doesnt finish the Job afterwards, and gets stucked:
+
+Aktive Codepage: 1252.
+E  0|  ++++++++++++++++++++++++ Log Start +++++++++++++++++++++++++
+E  1|  GOLIATH-04  rrClient console L     6.02.31    rrVer7.0.b8q+6.2
+E  2|  04.25 16:58.25
+E  3|  Client is running on Win7_sp1 x64 16x2.0 Intel 32.0Ghz
+E  4|  Environment user is     Rufin
+E  5|  Windows is using registry:  HKEY_USERS/S-1-5-21-2341192651-3826740998-3148351776-1118/
+E  6|  Environment AppData path:    USER_FOLDER\AppData\Roaming
+E  7|  WinApi Folder LocalAppData:  USER_FOLDER\AppData\Local
+E  8|  USERPROFILE: USER_FOLDER
+E  9|  . 
+E 10|  Job: {TVT}  Sequence: 1-39, 19
+E 11|  Scene: ...\    test_scene\    test_scene_A 613.82Kb 04.25 17:01.33
+E 12|  Render config used: Blender blender   3D18__Blender.cfg
+E 13|  Executable used: C:\Program Files\Blender Foundation\Blender 2.64\blender.exe   
+E 14| >set "rrExeBit=x64"  
+E 15| >set "rrExeVersion=2.64"  
+E 16| >set "rrExeVersionMinReq=2.64"  
+E 17| >set "rrExeVersionMajor=2"  
+E 18| >set "rrExeVersionMinor=64"  
+E 19| >set "rrExeOS=win"  
+E 20|  ++++++++++++ Environment Variables Job: ++++++++++++++++++++
+E 21| >set "rrJobRenderapp=Blender"  
+E 22| >set "rrJobRenderer=blender"  
+E 23| >set "rrJobProject=stemmann_hafen_2014"  
+E 24| >set "rrJobType=3D"  
+E 25| >set "rrJobRenderType="  
+E 26| >set "rrJobBit=x64"  
+E 27| >set "rrJobVersion=2.64"  
+E 28| >set "rrJobVersionMajor=2"  
+E 29| >set "rrJobVersionMinor=64"  
+E 30| >set "rrJobTiled=false"  
+E 31| >set "rrJobCustomScene=<auto>"  
+E 32| >set "rrJobCustomShot=<auto>"  
+E 33| >set "rrJobCustomVersion=<auto>"  
+E 34| >set "rrJobSceneOS=win"  
+E 35|  ++++++++++++ Environment Variables Client: +++++++++++++++++
+E 36| >set "rrClientName=GOLIATH-04"  
+E 37| >set "rrClientCPUs=16"  
+E 38| >set "rrClientCPUsUsed=16"  
+E 39| >set "rrClientBit=x64"  
+E 40| >set "rrClientRenderInstance=0"  
+E 41| >set "RR_ROOT=REPLACED_RR_ROOT"  
+E 42| >set "rrBin=REPLACED_RR_ROOT\bin\win\"  
+E 43| >set "rrPlugins=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\win_x64\"  
+E 44| >set "rrPluginsNoOS=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\"  
+E 45| >set "rrPrefs=REPLACED_RR_ROOT\render_apps\renderer_prefs\blender\win_x64\"  
+E 46| >set "rrSharedExeDir=REPLACED_RR_ROOT\render_apps\renderer_exe\blender\win_x64\"  
+E 47| >set "rrLocalTemp=C:\RR_localdata\temp\A\"  
+E 48| >set "TEMP=C:\RR_localdata\temp\A"  
+E 49| >set "TMP=C:\RR_localdata\temp\A"  
+E 50| >set "rrLocalRoot=C:\RR_localdata\"  
+E 51| >set "rrLocalExeDir=C:\RR_localdata\renderer_exe\blender\win_x64\"  
+E 52| >set "rrLocalPrefs=C:\RR_localdata\renderer_prefs\blender\win_x64\"  
+E 53| >set "rrLocalPlugins=C:\RR_localdata\renderer_plugins\blender\win_x64\"  
+E 54| >set "rrBaseAppPath=C:\Program Files\Blender Foundation\Blender 2.64"  
+S  0|  ++++++++++++ Environment Variables Done  +++++++++++++++++++
+S  1| 
+S  2| >call "C:\RR_localdata\_global.bat" 
+S  3| >rem ################ global environment for all render applications ################### 
+S  4| 
+S  5| >call "C:\RR_localdata\blender.bat" 
+S  6| >set "BLENDER_APP_DIR=C:\RR_localdata\renderer_prefs\blender\win_x64\" 
+S  7| >set "PATH=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\win_x64\2\2.*\scripts\addons;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Autodesk\Backburner\" 
+S  8| >set "BLENDER_PLUG_IN_PATH=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\win_x64\2\2.*\scripts\addons;" 
+S  9| >set "BLENDER_MODULE_PATH=REPLACED_RR_ROOT\render_apps\renderer_plugins\blender\win_x64\2\2.*\scripts\modules;;" 
+S 10| 
+R  0| >"REPLACED_RR_ROOT\bin\win\rrResetexitcode.exe"
+R  1| 
+R  2| +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+R  3| ++++++++++++++++++++++++++++++++++++++++++ START ++++++++++++++++++++++++++++++++++++++++++++++
+R  4| ++++++++++++++++++++++++++++++++++++++++ 7.0.b4+6.2 ++++++++++++++++++++++++++++++++++++++++++
+R  5| +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+R  6| 
+R  7| >"C:\Program Files\Blender Foundation\Blender 2.64\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\testing_A" -x 1 -F JPEG -s 1 -e 39 -j 19 -a 
+R  8| 
+R  9| found bundled python: C:\Program Files\Blender Foundation\Blender 2.64\2.64\python
+R 10| read blend: C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend
+R 11| Fra:1 Mem:6.02M (8.44M, peak 14.46M) | Scene | Elapsed: 00:00.00 | Synchronizing object | Suzanne
+R 12| ...{SHORTED - HERE IS NORMALY THE NORMAL BLENDER RENDERLOG }...
+R288| Fra:39 Mem:6.02M (8.44M, peak 29.64M) | Scene, RenderLayer | Elapsed: 00:02.40 | Rendering | Path Tracing Tile 64/64
+R289| 
+R290| Fra:39 Mem:6.02M (8.44M, peak 29.64M) | Scene, RenderLayer | Elapsed: 00:03.00 | Finished
+R291| Fra:39 Mem:6.01M (8.44M, peak 29.64M) Sce: Scene Ve:0 Fa:0 La:0
+R292| 
+R293| Saved: C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\testing_A0039.jpg Time: 00:03.01
+R294| Error, region type missing in - name:"Node", id:16
+R295| Error, region type missing in - name:"Image", id:6
+R296| Error, region type missing in - name:"Node", id:16
+R297| Error, region type missing in - name:"Node", id:16
+R298| Error, region type missing in - name:"Image", id:6
+R299| 
+R300| Blender quit
+R301| 
+R302| >"REPLACED_RR_ROOT\bin\win\rrCheckexitcode.exe" 0 0 0 1
+R303|
+
+Nothing happens from here on, until Job gets aborted - the the Frames get copied to the final directory
+
+Used Blender cfg files look like this:
+
+Issue 3 - Enhancement
+
+Rendering with compositing cannot be rendered by commandline render. So we need to start a Blender python script instead
+that then starts a rendering with Renderlayers and compositing
