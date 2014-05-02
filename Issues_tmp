@@ -27,7 +27,7 @@ E 19| >set "rrExeOS=win"
 E 20|  ++++++++++++ Environment Variables Job: ++++++++++++++++++++
 E 21| >set "rrJobRenderapp=Blender"  
 E 22| >set "rrJobRenderer=blender"  
-E 23| >set "rrJobProject=stemmann_hafen_2014"  
+E 23| >set "rrJobProject=st_2014"  
 E 24| >set "rrJobType=3D"  
 E 25| >set "rrJobRenderType="  
 E 26| >set "rrJobBit=x64"  
@@ -75,7 +75,7 @@ R  3| ++++++++++++++++++++++++++++++++++++++++++ START +++++++++++++++++++++++++
 R  4| ++++++++++++++++++++++++++++++++++++++++ 7.0.b4+6.2 ++++++++++++++++++++++++++++++++++++++++++
 R  5| +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 R  6| 
-R  7| >"C:\Program Files\Blender Foundation\Blender 2.70\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\test_Blend270_" -F JPEG -x 1 -t 0 -s 1 -e 39  -a 
+R  7| >"C:\Program Files\Blender Foundation\Blender 2.70\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\st_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\test_Blend270_" -F JPEG -x 1 -t 0 -s 1 -e 39  -a 
 R  8| Writing: /tmp/\blender.crash.txt
 R  9| 
 R 10| >"REPLACED_RR_ROOT\bin\win\rrCheckexitcode.exe" 11 0 0 1 
@@ -84,7 +84,7 @@ R 12|
 
 
 If you start the Command:
-C:\Program Files\Blender Foundation\Blender 2.70\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\test_Blend270_" -F JPEG -x 1 -t 0 -s 1 -e 39  -a
+C:\Program Files\Blender Foundation\Blender 2.70\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\st_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\test_Blend270_" -F JPEG -x 1 -t 0 -s 1 -e 39  -a
 directly in the Commandline Blender renders without any Problems.
 
 Content of the blender.crash.txt
@@ -99,7 +99,7 @@ Used cfg Files look like this :
 
 Issue 2 
 
-Blender is rendering wih 2.64. All Frames get renderd, but Royal Render doesnt finish the Job afterwards, and gets stucked:
+Blender is rendering wih 2.64. All Frames get renderd, but Royal Render doesn't finish the job afterwards, and gets stucked:
 
 Aktive Codepage: 1252.
 E  0|  ++++++++++++++++++++++++ Log Start +++++++++++++++++++++++++
@@ -125,7 +125,7 @@ E 19| >set "rrExeOS=win"
 E 20|  ++++++++++++ Environment Variables Job: ++++++++++++++++++++
 E 21| >set "rrJobRenderapp=Blender"  
 E 22| >set "rrJobRenderer=blender"  
-E 23| >set "rrJobProject=stemmann_hafen_2014"  
+E 23| >set "rrJobProject=st_2014"  
 E 24| >set "rrJobType=3D"  
 E 25| >set "rrJobRenderType="  
 E 26| >set "rrJobBit=x64"  
@@ -175,10 +175,10 @@ R  3| ++++++++++++++++++++++++++++++++++++++++++ START +++++++++++++++++++++++++
 R  4| ++++++++++++++++++++++++++++++++++++++++ 7.0.b4+6.2 ++++++++++++++++++++++++++++++++++++++++++
 R  5| +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 R  6| 
-R  7| >"C:\Program Files\Blender Foundation\Blender 2.64\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\testing_A" -x 1 -F JPEG -s 1 -e 39 -j 19 -a 
+R  7| >"C:\Program Files\Blender Foundation\Blender 2.64\blender.exe" -b "C:\RR_localdata\cachedscenes\Projekte_Projekte\st_2014\6421faf1\test_scene\test_scene_A.blend" -o "C:\RR_localdata\renderout\A\szenen\footage\test_scene\images\testing_A" -x 1 -F JPEG -s 1 -e 39 -j 19 -a 
 R  8| 
 R  9| found bundled python: C:\Program Files\Blender Foundation\Blender 2.64\2.64\python
-R 10| read blend: C:\RR_localdata\cachedscenes\Projekte_Projekte\stemmann_hafen_2014\6421faf1\test_scene\test_scene_A.blend
+R 10| read blend: C:\RR_localdata\cachedscenes\Projekte_Projekte\st_2014\6421faf1\test_scene\test_scene_A.blend
 R 11| Fra:1 Mem:6.02M (8.44M, peak 14.46M) | Scene | Elapsed: 00:00.00 | Synchronizing object | Suzanne
 R 12| ...{SHORTED - HERE IS NORMALY THE NORMAL BLENDER RENDERLOG }...
 R288| Fra:39 Mem:6.02M (8.44M, peak 29.64M) | Scene, RenderLayer | Elapsed: 00:02.40 | Rendering | Path Tracing Tile 64/64
@@ -198,9 +198,11 @@ R301|
 R302| >"REPLACED_RR_ROOT\bin\win\rrCheckexitcode.exe" 0 0 0 1
 R303|
 
-Nothing happens from here on, until Job gets aborted - the the Frames get copied to the final directory
+Nothing happens from here on, until Job gets aborted - the frames get copied to the final directory, except the last one of the assigned bunch.
 
 Used Blender cfg files look like this:
+
+
 
 Issue 3 - Enhancement
 
