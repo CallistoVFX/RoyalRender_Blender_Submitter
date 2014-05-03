@@ -1,5 +1,3 @@
-Blender Submitter for Royal Render 
-
 RoyalRender Blender Submitter
 =============================
 
