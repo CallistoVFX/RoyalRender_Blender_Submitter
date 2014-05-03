@@ -32,16 +32,16 @@ is started for Blender. In the current config Blender render is started via Comm
 FILL_PATH_HERE
 
 Second one is Blender.cfg wich contains the Path to the Blender application.
- File is Placed in FILL_PATH_HERE
+ File is Placed in RR_ROOT/install_paths/Blender.cfg
 
-ADD DOKU LINKS TO ROYAL RENDER
+find more at the RoyalRender help page: http://www.royalrender.de/help/
 
 
 ### Installation
 
 You need the RR_ROOT environment variable set on the submitter machine. Which usually already happend automatically on RoyalRender's Worksstation
 client install.
-Then put the blender_rr_submitter.py in your Blender/scripts/startup folder. which is usually unter "../blender foundation/Blender/2.*/scripts/startup"
+Then put the blender_rr_submitter.py in your Blender/scripts/startup folder. which is usually at "../blender foundation/Blender/2.*/scripts/startup"
 Copy the 3D19_Blender.cfg file to the RoyalRender Root share into the folder "render_apps/_config/"
 After installing blender on the render clients, you add the new renderer through the config dialogue of the clientwatch's configure/render applications
 dialogue. The automatic search and add function will only work if you also add a blender.cfg file unter "render_apps/_install_paths" stating the path
